@@ -9,9 +9,9 @@ import Foundation
 
 struct APIConstants {
     
-    static let base = "https://www.endclothing.com"
+    static let base = "https://adam-deleteme.s3.amazonaws.com"
     
     public struct urls {
-        public static let weeklyTrendProducts = "/media/catalog/example.json"
+        public static let taskList = "/tasks.json"
     }
 }

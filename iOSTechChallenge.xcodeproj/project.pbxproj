@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F826C6FF25E9894800D946C0 /* iOSTechChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C6FE25E9894800D946C0 /* iOSTechChallengeApp.swift */; };
-		F826C70125E9894800D946C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C70025E9894800D946C0 /* ContentView.swift */; };
+		F826C70125E9894800D946C0 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C70025E9894800D946C0 /* TaskListView.swift */; };
 		F826C70325E9894B00D946C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F826C70225E9894B00D946C0 /* Assets.xcassets */; };
 		F826C70625E9894B00D946C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F826C70525E9894B00D946C0 /* Preview Assets.xcassets */; };
 		F826C71125E9894C00D946C0 /* iOSTechChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C71025E9894C00D946C0 /* iOSTechChallengeTests.swift */; };
@@ -19,6 +19,10 @@
 		F826C74925E98AB200D946C0 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C74825E98AB200D946C0 /* APIConstants.swift */; };
 		F826C75225E98B8400D946C0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C75125E98B8400D946C0 /* Task.swift */; };
 		F826C75A25E98BD900D946C0 /* TaskListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C75925E98BD900D946C0 /* TaskListService.swift */; };
+		F826C76225E98ECF00D946C0 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F826C76125E98ECF00D946C0 /* TaskListViewModel.swift */; };
+		F8EF3CE025E9E614007A8944 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = F8EF3CDF25E9E614007A8944 /* Reachability */; };
+		F8EF3CE825E9E96D007A8944 /* Reachability+Convinience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF3CE725E9E96D007A8944 /* Reachability+Convinience.swift */; };
+		F8EF3CF025E9ECE3007A8944 /* View+Convinience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF3CEF25E9ECE3007A8944 /* View+Convinience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +45,7 @@
 /* Begin PBXFileReference section */
 		F826C6FB25E9894800D946C0 /* iOSTechChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTechChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F826C6FE25E9894800D946C0 /* iOSTechChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTechChallengeApp.swift; sourceTree = "<group>"; };
-		F826C70025E9894800D946C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F826C70025E9894800D946C0 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		F826C70225E9894B00D946C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F826C70525E9894B00D946C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F826C70725E9894B00D946C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +61,9 @@
 		F826C74825E98AB200D946C0 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		F826C75125E98B8400D946C0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F826C75925E98BD900D946C0 /* TaskListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListService.swift; sourceTree = "<group>"; };
+		F826C76125E98ECF00D946C0 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		F8EF3CE725E9E96D007A8944 /* Reachability+Convinience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+Convinience.swift"; sourceTree = "<group>"; };
+		F8EF3CEF25E9ECE3007A8944 /* View+Convinience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Convinience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8EF3CE025E9E614007A8944 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,11 +115,11 @@
 		F826C6FD25E9894800D946C0 /* iOSTechChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F826C6FE25E9894800D946C0 /* iOSTechChallengeApp.swift */,
+				F8EF3CE425E9E8D4007A8944 /* Extensions */,
 				F826C72E25E9898300D946C0 /* Network */,
-				F826C72D25E9897B00D946C0 /* View */,
-				F826C72C25E9897400D946C0 /* ViewModel */,
-				F826C75025E98B7700D946C0 /* Models */,
 				F826C73A25E98A4900D946C0 /* Protocols */,
+				F8EF3CE525E9E8F4007A8944 /* Scenes */,
 				F826C70225E9894B00D946C0 /* Assets.xcassets */,
 				F826C70725E9894B00D946C0 /* Info.plist */,
 				F826C70425E9894B00D946C0 /* Preview Content */,
@@ -148,6 +156,7 @@
 		F826C72C25E9897400D946C0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F826C76125E98ECF00D946C0 /* TaskListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,8 +164,7 @@
 		F826C72D25E9897B00D946C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F826C70025E9894800D946C0 /* ContentView.swift */,
-				F826C6FE25E9894800D946C0 /* iOSTechChallengeApp.swift */,
+				F826C70025E9894800D946C0 /* TaskListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +196,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		F8EF3CE425E9E8D4007A8944 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8EF3CE725E9E96D007A8944 /* Reachability+Convinience.swift */,
+				F8EF3CEF25E9ECE3007A8944 /* View+Convinience.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F8EF3CE525E9E8F4007A8944 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F8EF3CE625E9E903007A8944 /* TaskList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		F8EF3CE625E9E903007A8944 /* TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				F826C72D25E9897B00D946C0 /* View */,
+				F826C72C25E9897400D946C0 /* ViewModel */,
+				F826C75025E98B7700D946C0 /* Models */,
+			);
+			path = TaskList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -204,6 +239,9 @@
 			dependencies = (
 			);
 			name = iOSTechChallenge;
+			packageProductDependencies = (
+				F8EF3CDF25E9E614007A8944 /* Reachability */,
+			);
 			productName = iOSTechChallenge;
 			productReference = F826C6FB25E9894800D946C0 /* iOSTechChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -275,6 +313,9 @@
 				Base,
 			);
 			mainGroup = F826C6F225E9894800D946C0;
+			packageReferences = (
+				F8EF3CDE25E9E614007A8944 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = F826C6FC25E9894800D946C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -317,13 +358,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8EF3CF025E9ECE3007A8944 /* View+Convinience.swift in Sources */,
 				F826C75A25E98BD900D946C0 /* TaskListService.swift in Sources */,
 				F826C73C25E98A5F00D946C0 /* URLSessionProtocol.swift in Sources */,
-				F826C70125E9894800D946C0 /* ContentView.swift in Sources */,
+				F826C70125E9894800D946C0 /* TaskListView.swift in Sources */,
 				F826C74925E98AB200D946C0 /* APIConstants.swift in Sources */,
 				F826C6FF25E9894800D946C0 /* iOSTechChallengeApp.swift in Sources */,
+				F826C76225E98ECF00D946C0 /* TaskListViewModel.swift in Sources */,
 				F826C73625E989FE00D946C0 /* BaseService.swift in Sources */,
 				F826C75225E98B8400D946C0 /* Task.swift in Sources */,
+				F8EF3CE825E9E96D007A8944 /* Reachability+Convinience.swift in Sources */,
 				F826C74425E98A6800D946C0 /* URLSessionDataTaskProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F8EF3CDE25E9E614007A8944 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F8EF3CDF25E9E614007A8944 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8EF3CDE25E9E614007A8944 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F826C6F325E9894800D946C0 /* Project object */;
 }

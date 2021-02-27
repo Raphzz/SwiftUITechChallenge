@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "hydration.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hydration.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

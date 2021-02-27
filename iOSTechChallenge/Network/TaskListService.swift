@@ -7,11 +7,11 @@
 
 import Foundation
 
-class WeeklyTrendService: BaseService {
+class TaskListService: BaseService {
     
     func fetch (completionHandler: @escaping (Result<[Task], ServiceFetchError>) -> Void) {
         
-        fetch(listOf: [Task].self, withURL: url(withPath: APIConstants.urls.weeklyTrendProducts)) { (result) in
+        fetch(listOf: [Task].self, withURL: url(withPath: APIConstants.urls.taskList)) { (result) in
             switch result {
             case .success(let events):
                 completionHandler(Result.success(events))
