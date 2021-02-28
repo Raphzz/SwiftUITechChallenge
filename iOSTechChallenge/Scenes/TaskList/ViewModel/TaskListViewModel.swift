@@ -73,7 +73,7 @@ class TaskListViewModel: ObservableObject {
         }
     }
     
-    func toogleFilter(_ filter: TaskType) {
+    func toggleFilter(_ filter: TaskType) {
         if filtersApplied.contains(filter) {
             filtersApplied = filtersApplied.filter { $0 != filter }
         } else {

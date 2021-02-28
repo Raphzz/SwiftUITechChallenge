@@ -26,7 +26,7 @@ class TaskListMockResponse {
         }
     }
 
-    func getResponse() -> [Task]? {
+    func getTasks() -> [Task]? {
         return tasks
     }
 }

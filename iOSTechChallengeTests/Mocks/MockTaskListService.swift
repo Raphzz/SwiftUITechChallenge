@@ -11,9 +11,16 @@ import Foundation
 
 class MockTaskListService: TaskListServiceProtocol {
     
-    var isFetchBeingCalled = false
+    private let mockTasksResponse = TaskListMockResponse()
+    
+    var success = true
     
     func fetch(completionHandler: @escaping (Result<[Task], ServiceFetchError>) -> Void) {
-        isFetchBeingCalled = true
+        if success {
+            completionHandler(Result.success(mockTasksResponse.getTasks()!))
+        } else {
+            let errorTemp = ServiceFetchError.invalidJSON
+            completionHandler(Result.failure(errorTemp))
+        }
     }
 }

@@ -13,25 +13,25 @@ class CacheHelperTests: XCTestCase {
 
     private let cacheHelper = CacheManager()
 
-    private let mockPostsResponse = TaskListMockResponse()
+    private let mockTasksResponse = TaskListMockResponse()
 
     func testInit_AssertObjectIsBeingSavedToCache() {
 
-        cacheHelper.save(mockPostsResponse.getResponse()?.first, key: String(describing: mockPostsResponse.getResponse()?.first?.id))
+        cacheHelper.save(mockTasksResponse.getTasks()?.first, key: String(describing: mockTasksResponse.getTasks()?.first?.id))
 
-        let cachedData = cacheHelper.get(Task.self, key: String(describing: mockPostsResponse.getResponse()?.first?.id))
+        let cachedData = cacheHelper.get(Task.self, key: String(describing: mockTasksResponse.getTasks()?.first?.id))
 
         XCTAssertNotNil(cachedData!)
-        XCTAssert(cachedData!.type == mockPostsResponse.getResponse()?.first?.type)
+        XCTAssert(cachedData!.type == mockTasksResponse.getTasks()?.first?.type)
     }
 
     func testInit_AssertArrayIsBeingSavedToCache() {
 
-        cacheHelper.save(mockPostsResponse.getResponse())
+        cacheHelper.save(mockTasksResponse.getTasks())
 
         let cachedData = cacheHelper.get([Task]())
 
         XCTAssertNotNil(cachedData!)
-        XCTAssert(cachedData!.first?.type == mockPostsResponse.getResponse()?.first?.type)
+        XCTAssert(cachedData!.first?.type == mockTasksResponse.getTasks()?.first?.type)
     }
 }

@@ -30,7 +30,7 @@ struct TaskListView: View {
                     HStack(spacing: 15) {
                         ForEach(0..<viewModel.taskTypes.count) { index in
                             Button(action: {
-                                viewModel.toogleFilter(viewModel.taskTypes[index])
+                                viewModel.toggleFilter(viewModel.taskTypes[index])
                             }) {
                                 Image(viewModel.taskTypes[index].rawValue)
                             }.frame(width: 30, height: 30, alignment: .center).scaledToFill()
