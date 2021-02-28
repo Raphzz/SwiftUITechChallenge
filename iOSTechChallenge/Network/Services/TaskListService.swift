@@ -7,7 +7,11 @@
 
 import Foundation
 
-class TaskListService: BaseService {
+protocol TaskListServiceProtocol {
+    func fetch (completionHandler: @escaping (Result<[Task], ServiceFetchError>) -> Void)
+}
+
+class TaskListService: BaseService, TaskListServiceProtocol {
     
     private let cache = CacheManager()
     

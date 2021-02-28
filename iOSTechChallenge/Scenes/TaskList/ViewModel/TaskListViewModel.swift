@@ -20,7 +20,7 @@ class TaskListViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    private let taskListService: TaskListService
+    private let taskListService: TaskListServiceProtocol
     
     private let reachability = try! Reachability()
     
@@ -54,7 +54,7 @@ class TaskListViewModel: ObservableObject {
         }
     }
     
-    init(service: TaskListService) {
+    init(service: TaskListServiceProtocol) {
         self.taskListService = service
         startReachability()
         fetchTaskList()
