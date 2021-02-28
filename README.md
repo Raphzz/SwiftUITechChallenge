@@ -4,7 +4,7 @@ iOS App to display a list of health care tasks and be able to filter them by typ
 App is writen using Xcode 12.4
 
 <p align="center">
-  <img width=35% src="https://github.com/Raphzz/SwitchUITechChallenge/design.png" />
+  <img width=35% src="https://github.com/Raphzz/SwiftUITechChallenge/blob/main/design.png" />
 </p>
 
 ## Table of Contents
