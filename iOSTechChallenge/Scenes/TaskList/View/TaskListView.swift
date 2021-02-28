@@ -26,7 +26,7 @@ struct TaskListView: View {
                                     .fontWeight(.light)
                             }
                         }.padding()
-                    }
+                    }.accessibility(identifier: "taskList")
                     HStack(spacing: 15) {
                         ForEach(0..<viewModel.taskTypes.count) { index in
                             Button(action: {
@@ -34,6 +34,7 @@ struct TaskListView: View {
                             }) {
                                 Image(viewModel.taskTypes[index].rawValue)
                             }.frame(width: 30, height: 30, alignment: .center).scaledToFill()
+                            .accessibility(identifier: viewModel.taskTypes[index].rawValue)
                         }
                     }.frame(height: 100)
                 }.navigationBarTitle("Tasks", displayMode: .inline)
@@ -44,6 +45,7 @@ struct TaskListView: View {
                         .frame(height: 40)
                         .background(Color.red)
                         .isHidden(viewModel.isOnline ?? true)
+                        .accessibility(identifier: "offlineBanner")
                     Spacer()
                 }
             }

@@ -18,6 +18,15 @@ class TaskListService: BaseService, TaskListServiceProtocol {
     func fetch (completionHandler: @escaping (Result<[Task], ServiceFetchError>) -> Void) {
         
         fetch(listOf: [Task].self, withURL: url(withPath: APIConstants.urls.taskList)) { (result) in
+            
+            #if DEBUG
+            if CommandLine.arguments.contains("-mockListContent") {
+                let mockResponse = TaskListMockResponse()
+                completionHandler(Result.success(mockResponse.getTasks()!))
+                return
+            }
+            #endif
+            
             switch result {
             case .success(let tasks):
                 self.cache.save(tasks)

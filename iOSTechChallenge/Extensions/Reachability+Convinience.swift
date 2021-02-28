@@ -10,6 +10,14 @@ import Reachability
 
 extension Reachability {
     func startReachability(completion: @escaping ((Bool) -> Void)) {
+        
+        #if DEBUG
+        if CommandLine.arguments.contains("-isOfflineMode") {
+            completion(false)
+            return
+        }
+        #endif
+        
         self.whenReachable = { _ in
             completion(true)
         }

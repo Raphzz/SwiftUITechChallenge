@@ -24,6 +24,8 @@
 		F88D31E025EBF4EF007DAC89 /* TaskListResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F88D31DB25EBF4EF007DAC89 /* TaskListResponseMock.json */; };
 		F88D31E125EBF4EF007DAC89 /* MockTaskListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D31DC25EBF4EF007DAC89 /* MockTaskListService.swift */; };
 		F88D31E225EBF4EF007DAC89 /* TaskListMockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D31DD25EBF4EF007DAC89 /* TaskListMockResponse.swift */; };
+		F88D320325EC0847007DAC89 /* TaskListMockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88D320025EC0847007DAC89 /* TaskListMockResponse.swift */; };
+		F88D320425EC0847007DAC89 /* TaskListResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = F88D320225EC0847007DAC89 /* TaskListResponseMock.json */; };
 		F8EF3CE025E9E614007A8944 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = F8EF3CDF25E9E614007A8944 /* Reachability */; };
 		F8EF3CE825E9E96D007A8944 /* Reachability+Convinience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF3CE725E9E96D007A8944 /* Reachability+Convinience.swift */; };
 		F8EF3CF025E9ECE3007A8944 /* View+Convinience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF3CEF25E9ECE3007A8944 /* View+Convinience.swift */; };
@@ -71,6 +73,8 @@
 		F88D31DB25EBF4EF007DAC89 /* TaskListResponseMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TaskListResponseMock.json; sourceTree = "<group>"; };
 		F88D31DC25EBF4EF007DAC89 /* MockTaskListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTaskListService.swift; sourceTree = "<group>"; };
 		F88D31DD25EBF4EF007DAC89 /* TaskListMockResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListMockResponse.swift; sourceTree = "<group>"; };
+		F88D320025EC0847007DAC89 /* TaskListMockResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskListMockResponse.swift; path = iOSTechChallengeUITests/TaskListMockResponse.swift; sourceTree = SOURCE_ROOT; };
+		F88D320225EC0847007DAC89 /* TaskListResponseMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TaskListResponseMock.json; sourceTree = "<group>"; };
 		F8EF3CE725E9E96D007A8944 /* Reachability+Convinience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reachability+Convinience.swift"; sourceTree = "<group>"; };
 		F8EF3CEF25E9ECE3007A8944 /* View+Convinience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Convinience.swift"; sourceTree = "<group>"; };
 		F8EF3D1025E9F5AA007A8944 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				F826C70225E9894B00D946C0 /* Assets.xcassets */,
 				F826C70725E9894B00D946C0 /* Info.plist */,
 				F826C70425E9894B00D946C0 /* Preview Content */,
+				F88D31FF25EC080B007DAC89 /* UI Test Mock */,
 			);
 			path = iOSTechChallenge;
 			sourceTree = "<group>";
@@ -226,6 +231,24 @@
 			);
 			path = "JSON mocks";
 			sourceTree = "<group>";
+		};
+		F88D31FF25EC080B007DAC89 /* UI Test Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F88D320125EC0847007DAC89 /* JSON mocks */,
+				F88D320025EC0847007DAC89 /* TaskListMockResponse.swift */,
+			);
+			path = "UI Test Mock";
+			sourceTree = "<group>";
+		};
+		F88D320125EC0847007DAC89 /* JSON mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F88D320225EC0847007DAC89 /* TaskListResponseMock.json */,
+			);
+			name = "JSON mocks";
+			path = "iOSTechChallengeUITests/JSON mocks";
+			sourceTree = SOURCE_ROOT;
 		};
 		F8EF3CE425E9E8D4007A8944 /* Extensions */ = {
 			isa = PBXGroup;
@@ -373,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F826C70625E9894B00D946C0 /* Preview Assets.xcassets in Resources */,
+				F88D320425EC0847007DAC89 /* TaskListResponseMock.json in Resources */,
 				F826C70325E9894B00D946C0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +432,7 @@
 				F826C6FF25E9894800D946C0 /* iOSTechChallengeApp.swift in Sources */,
 				F826C76225E98ECF00D946C0 /* TaskListViewModel.swift in Sources */,
 				F826C73625E989FE00D946C0 /* BaseService.swift in Sources */,
+				F88D320325EC0847007DAC89 /* TaskListMockResponse.swift in Sources */,
 				F826C75225E98B8400D946C0 /* Task.swift in Sources */,
 				F8EF3CE825E9E96D007A8944 /* Reachability+Convinience.swift in Sources */,
 				F826C74425E98A6800D946C0 /* URLSessionDataTaskProtocol.swift in Sources */,

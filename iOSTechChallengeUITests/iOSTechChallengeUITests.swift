@@ -8,27 +8,67 @@
 import XCTest
 
 class iOSTechChallengeUITests: XCTestCase {
+    
+    // MARK:- LAUNCH ARGUMENTS
+    
+    private let offlineModeArgument = "-isOfflineMode"
+    private let shouldMockListContentArgument = "-mockListContent"
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    override func setUp() {
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func test_List_WithMockResults() {
+        
+        // Given: The App is using Mock data
         let app = XCUIApplication()
+        app.launchArguments = ["-mockListContent"]
+        
+        // When: App is launched
         app.launch()
+        
+        let taskList = app.tables["taskList"]
+        let taskListExists = taskList.exists
+        
+        // Expect: List to exist with 6 results
+        XCTAssertTrue(taskListExists)
+        XCTAssertTrue(taskList.children(matching: .cell).count == 6 )
+    }
+    
+    func test_List_FilterIsApplied() {
+        
+        // Given: The App is using Mock data
+        let app = XCUIApplication()
+        app.launchArguments = ["-mockListContent"]
+        
+        // When: App is launched
+        app.launch()
+        
+        let taskList = app.tables["taskList"]
+        let generalTypeFilterButton = app.buttons["general"]
+        
+        // And: Filter general tasks button is tapped
+        generalTypeFilterButton.tap()
+        
+        // Expect: List to have 2 elements
+        XCTAssertTrue(taskList.children(matching: .cell).count == 2 )
+    }
+    
+    func test_OfflineBannerExists_WhenAirplaneMode_Active() {
+        
+        // Given: The App is in Offline mode
+        let app = XCUIApplication()
+        app.launchArguments = [offlineModeArgument]
+        
+        // When: App is launched
+        app.launch()
+        
+        // Expect: Offline Banner to be visible
+        let offlineBanner = app.staticTexts["offlineBanner"]
+        let exists = NSPredicate(format: "exists == 1")
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        expectation(for: exists, evaluatedWith: offlineBanner, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 
     func testLaunchPerformance() throws {
