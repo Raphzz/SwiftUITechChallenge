@@ -1,6 +1,6 @@
 //
-//  iOSTechChallengeTests.swift
-//  iOSTechChallengeTests
+//  TaskListViewModelTests.swift
+//  TaskListViewModelTests
 //
 //  Created by Raphael Pedrini on 26/02/2021.
 //

@@ -1,9 +1,8 @@
 //
-//  PostsMockResponse.swift
-//  SwiftDemoExerciseTests
+//  TaskListMockResponse.swift
+//  iOSTechChallengeTests
 //
-//  Created by Raphael Pedrini Velasqua on 05/12/2019.
-//  Copyright © 2019 raph. All rights reserved.
+//  Created by Raphael Pedrini on 28/02/2021.
 //
 
 import Foundation
