@@ -35,7 +35,7 @@ Code signing settings are left at automatic here for simplicity, you can set the
 8. Ensure the iPhone has development mode enabled, from the Devices & Simulators window: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd>
 9. Clean, build and run the application on an iPhone running iOS 13.0
 
-### User Stories
+### Features
 - Task List
 - Reactive code, Architecture MVVM
 - SwiftUI
